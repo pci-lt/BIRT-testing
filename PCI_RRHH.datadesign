@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile" name="Infosync" id="407">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.connectionProperties</name>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.oda.profile.db.provider.id</name>
+                    <value>org.eclipse.datatools.enablement.postgresql.connectionProfile</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.savePWD</name>
+                    <value>true</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.drivers.defnType</name>
+                    <value>com.actuate.data.oda.jdbc.dbprofile.postgresql_8_x.driverTemplate</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.driverDefinitionID</name>
+                    <value>DriverDefn.com.actuate.data.oda.jdbc.dbprofile.postgresql_8_x.driverTemplate.Actuate-bundled PostgreSQL Driver Default</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.version</name>
+                    <value>8.x</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.vendor</name>
+                    <value>postgres</value>
+                </ex-property>
+            </list-property>
+            <property name="databaseName">infosync</property>
+            <property name="username">infosync</property>
+            <encrypted-property name="password" encryptionID="jce">caab65efdde92e0b</encrypted-property>
+            <property name="URL">jdbc:postgresql://localhost:5434/infosync</property>
+            <property name="driverClass">org.postgresql.Driver</property>
+            <property name="jarList">/Users/InfoSync/Documents/BRDPro/eclipse/plugins/com.actuate.data.oda.jdbc.drivers_23.0.0.v20131216/lib/postgresql/postgresql-9.2-1003.jdbc4.jar</property>
+        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.data.oda.mongodb" name="MongoDB" id="4">
+            <property name="mongoURI">mongodb://127.0.0.1:27023/infosync_answers_client_1259</property>
+            <property name="ignoreURI">false</property>
+            <property name="serverPort">27017</property>
+            <property name="socketKeepAlive">true</property>
+            <property name="useRequestSession">true</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="Usuarios Admin" id="408">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">id</text-property>
+                    <text-property name="heading">id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">first_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">first_name</text-property>
+                    <text-property name="heading">first_name</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">position</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">position</text-property>
+                    <text-property name="heading">position</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">email</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">email</text-property>
+                    <text-property name="heading">email</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">first_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">position</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">email</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Infosync</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">first_name</property>
+                    <property name="nativeName">first_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">position</property>
+                    <property name="nativeName">position</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">email</property>
+                    <property name="nativeName">email</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT "id", "first_name", "position", "email"
+    FROM "public"."users_customuser"
+    WHERE ("parent_id" = 1259 OR "id" = 1259) AND "deleted_at" IS NULL
+  ]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">&lt;?xml version="1.0" encoding="UTF-8"?>&#13;
+&lt;SQLQueryBuilder editorInputType="SQLBuilderStorageEditorInput" name="Usuarios Admin" version="1.0">&#13;
+&lt;SQLStatement>SELECT &amp;quot;id&amp;quot;, &amp;quot;first_name&amp;quot;, &amp;quot;position&amp;quot;, &amp;quot;email&amp;quot;&amp;#x0A;    FROM &amp;quot;public&amp;quot;.&amp;quot;users_customuser&amp;quot;&amp;#x0A;    WHERE (&amp;quot;parent_id&amp;quot; = 1259 OR &amp;quot;id&amp;quot; = 1259) AND &amp;quot;deleted_at&amp;quot; IS NULL&amp;#x0A;  &lt;/SQLStatement>&#13;
+&lt;connInfo>postgres_8.x:Transient.org.eclipse.datatools.enablement.postgresql.connectionProfile:infosync:infosync&lt;/connInfo>&#13;
+&lt;omitSchemaInfo>false:true:&lt;/omitSchemaInfo>&#13;
+&lt;editorInputUsageOptions>useWindowState=true&lt;/editorInputUsageOptions>&#13;
+&lt;windowState height="471" version="1.0" width="687">&#13;
+&lt;control height="142" isHideable="true" isVisible="true" name="SQLSourceViewer" width="660"/>&#13;
+&lt;control height="148" isHideable="true" isVisible="true" name="DesignViewer" width="673"/>&#13;
+&lt;control height="143" isHideable="true" isVisible="true" name="GraphControl" width="665"/>&#13;
+&lt;control height="147" isHideable="true" isVisible="false" name="OutlineViewer" width="198"/>&#13;
+&lt;/windowState>&#13;
+&lt;/SQLQueryBuilder></property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>id</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>first_name</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>first_name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>first_name</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>position</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>position</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>position</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>email</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>75</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>email</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>email</design:label>
+            <design:formattingHints>
+              <design:displaySize>75</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria>
+        <design:rowOrdering/>
+      </design:criteria>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="Usuarios Tecnicos" id="409">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">id</text-property>
+                    <text-property name="heading">id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">position</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">position</text-property>
+                    <text-property name="heading">position</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">first_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">first_name</text-property>
+                    <text-property name="heading">first_name</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">email</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">email</text-property>
+                    <text-property name="heading">email</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">position</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">first_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">email</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Infosync</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">position</property>
+                    <property name="nativeName">position</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">first_name</property>
+                    <property name="nativeName">first_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">email</property>
+                    <property name="nativeName">email</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT "public"."users_customuser"."id", "public"."users_customuser"."position",
+    "public"."users_customuser"."first_name", "public"."users_customuser"."email"
+    FROM
+         "public"."users_customuser" JOIN "public"."plans_license" ON "public"."users_customuser"."id" = "public"."plans_license"."user_id"
+    WHERE "public"."plans_license"."connection_id" IN (2072, 2073)
+  ]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">&lt;?xml version="1.0" encoding="UTF-8"?>&#13;
+&lt;SQLQueryBuilder editorInputType="SQLBuilderStorageEditorInput" name="Usuarios Tecnicos" version="1.0">&#13;
+&lt;SQLStatement>SELECT &amp;quot;public&amp;quot;.&amp;quot;users_customuser&amp;quot;.&amp;quot;id&amp;quot;, &amp;quot;public&amp;quot;.&amp;quot;users_customuser&amp;quot;.&amp;quot;position&amp;quot;,&amp;#x0A;    &amp;quot;public&amp;quot;.&amp;quot;users_customuser&amp;quot;.&amp;quot;first_name&amp;quot;, &amp;quot;public&amp;quot;.&amp;quot;users_customuser&amp;quot;.&amp;quot;email&amp;quot;&amp;#x0A;    FROM&amp;#x0A;         &amp;quot;public&amp;quot;.&amp;quot;users_customuser&amp;quot; JOIN &amp;quot;public&amp;quot;.&amp;quot;plans_license&amp;quot; ON &amp;quot;public&amp;quot;.&amp;quot;users_customuser&amp;quot;.&amp;quot;id&amp;quot; = &amp;quot;public&amp;quot;.&amp;quot;plans_license&amp;quot;.&amp;quot;user_id&amp;quot;&amp;#x0A;    WHERE &amp;quot;public&amp;quot;.&amp;quot;plans_license&amp;quot;.&amp;quot;connection_id&amp;quot; IN (2072, 2073)&amp;#x0A;  &lt;/SQLStatement>&#13;
+&lt;connInfo>postgres_8.x:Transient.org.eclipse.datatools.enablement.postgresql.connectionProfile:infosync:infosync&lt;/connInfo>&#13;
+&lt;omitSchemaInfo>false:true:&lt;/omitSchemaInfo>&#13;
+&lt;editorInputUsageOptions>useWindowState=true&lt;/editorInputUsageOptions>&#13;
+&lt;windowState height="471" version="1.0" width="687">&#13;
+&lt;control height="142" isHideable="true" isVisible="true" name="SQLSourceViewer" width="660"/>&#13;
+&lt;control height="148" isHideable="true" isVisible="true" name="DesignViewer" width="673"/>&#13;
+&lt;control height="143" isHideable="true" isVisible="true" name="GraphControl" width="665"/>&#13;
+&lt;control height="147" isHideable="true" isVisible="false" name="OutlineViewer" width="198"/>&#13;
+&lt;/windowState>&#13;
+&lt;/SQLQueryBuilder></property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>id</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>position</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>position</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>position</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>first_name</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>first_name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>first_name</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>email</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>75</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>email</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>email</design:label>
+            <design:formattingHints>
+              <design:displaySize>75</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria>
+        <design:rowOrdering/>
+      </design:criteria>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <derived-data-set extensionID="com.actuate.birt.data.union" name="Union Usuarios" id="410">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Division</property>
+                    <expression name="expression" type="javascript">var position = row["position"];&#13;
+var display = "Desconocido";&#13;
+&#13;
+if(position != null || position != ""){&#13;
+	var array_position = position.split(" - ");&#13;
+	display = array_position[0];&#13;
+}&#13;
+&#13;
+display;</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Celula</property>
+                    <expression name="expression" type="javascript">var position = row["position"];&#13;
+var display = "Desconocido";&#13;
+&#13;
+if(position != null || position != ""){&#13;
+	var array_position = position.split(" - ");&#13;
+	display = array_position[1];&#13;
+}&#13;
+&#13;
+display;</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Departamento</property>
+                    <expression name="expression" type="javascript">var position = row["position"];&#13;
+var display = "Desconocido";&#13;
+&#13;
+if(position != null || position != ""){&#13;
+	var array_position = position.split(" - ");&#13;
+	display = array_position[2];&#13;
+}&#13;
+&#13;
+display;</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Puesto</property>
+                    <expression name="expression" type="javascript">var position = row["position"];&#13;
+var display = "Desconocido";&#13;
+&#13;
+if(position != null || position != ""){&#13;
+	var array_position = position.split(" - ");&#13;
+	display = array_position[3];&#13;
+}&#13;
+&#13;
+display;</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">first_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">first_name</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">position</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">position</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">email</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">email</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Division</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Celula</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Departamento</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Puesto</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">is-false</property>
+                    <expression name="expr" type="javascript">row["id"] == 1523 || row["id"] == 1720 || row["id"] == 2059 || row["id"] == 1879 || row["id"] == 1717 || row["id"] == 1719 || row["id"] == 1897 || row["id"] == 2052 || row["id"] == 2156 || row["id"] == 1718 || row["id"] == 1433 || row["id"] == 2852 || row["id"] == 2625 || row["id"] == 1259 || row["id"] == 1873 || row["id"] == 2072 || row["id"] == 2626</expression>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">first_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">position</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">email</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Division</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Celula</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Departamento</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Puesto</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <simple-property-list name="inputDataSets">
+                <value>Usuarios Admin</value>
+                <value>Usuarios Tecnicos</value>
+            </simple-property-list>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tns:Union xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.actuate.com/birt/dataset_union.xsd" xmlns:tns="http://schemas.actuate.com/">
+<tns:DataSet Index="0" name="Usuarios Admin">
+<tns:Column name="id"/>
+<tns:Column name="first_name"/>
+<tns:Column name="position"/>
+<tns:Column name="email"/>
+</tns:DataSet>
+<tns:DataSet Index="1" name="Usuarios Tecnicos">
+<tns:Column name="id"/>
+<tns:Column name="position"/>
+<tns:Column name="first_name"/>
+<tns:Column name="email"/>
+</tns:DataSet>
+</tns:Union>]]></xml-property>
+        </derived-data-set>
+    </data-sets>
+</datamart>

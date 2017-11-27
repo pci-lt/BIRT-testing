@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
+    <property name="units">in</property>
+    <property name="theme">ThemesReportItems31.Modern</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="Data Source" id="6">
+            <property name="datamartURL">db_PCIn</property>
+            <property name="accessType">transient</property>
+            <list-property name="paramBindings"/>
+        </data-mart-data-source>
+    </data-sources>
+    <data-sets>
+        <data-mart-data-set name="join_user_connections" id="414">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">connection_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">connection_id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">sum</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">sum</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">expiration</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">expiration</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">parent_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">parent_id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">user_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">user_id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="filter"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Data Set_1::first_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">connection_id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">empleados::first_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">email</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">created_at</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">last_login</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">position</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">max</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">expiration</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">sum</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">parent_id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">user_id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">is_active</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">phone</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Join_user_connections</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Data Set_1::first_name</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">connection_id</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">empleados::first_name</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">email</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">created_at</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">last_login</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">position</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">max</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">expiration</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">sum</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">parent_id</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">user_id</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">is_active</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">phone</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+    </data-sets>
+    <styles>
+        <style name="NewStyle" id="679">
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bolder</property>
+            <property name="fontStyle">italic</property>
+        </style>
+        <style name="Propietario" id="682">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="fontStyle">oblique</property>
+            <property name="textUnderline">none</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="orientation">auto</property>
+            <property name="height">11in</property>
+            <property name="width">8.5in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="684">
+            <property name="pageBreakAfter">avoid</property>
+            <property name="pageBreakBefore">avoid</property>
+            <property name="pageBreakInside">avoid</property>
+            <property name="width">13.583333333333334in</property>
+            <column id="685">
+                <property name="width">13.583333333333334in</property>
+            </column>
+            <row id="686">
+                <cell id="687">
+                    <text id="170">
+                        <property name="fontSize">18pt</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Reporte de Actividad (Conexiones)
+]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="688">
+                <cell id="689">
+                    <table id="578">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__ac_group_collapse_level</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="marginTop">24pt</property>
+                        <property name="marginLeft">30pt</property>
+                        <property name="width">13.083333333333334in</property>
+                        <property name="dataSet">join_user_connections</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Data Set_1::first_name</property>
+                                <text-property name="displayName">Data Set_1::first_name</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Data Set_1::first_name"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">connection_id</property>
+                                <text-property name="displayName">connection_id</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["connection_id"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">empleados::first_name</property>
+                                <text-property name="displayName">empleados::first_name</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["empleados::first_name"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">email</property>
+                                <text-property name="displayName">email</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["email"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">created_at</property>
+                                <text-property name="displayName">created_at</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["created_at"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">last_login</property>
+                                <text-property name="displayName">last_login</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["last_login"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">position</property>
+                                <text-property name="displayName">position</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["position"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">max</property>
+                                <text-property name="displayName">max</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["max"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">expiration</property>
+                                <text-property name="displayName">expiration</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["expiration"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">sum</property>
+                                <text-property name="displayName">sum</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["sum"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Aggregation</property>
+                                <property name="dataType">integer</property>
+                                <simple-property-list name="aggregateOn">
+                                    <value>Conexion</value>
+                                </simple-property-list>
+                                <property name="aggregateFunction">COUNT</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                    </structure>
+                                </list-property>
+                                <expression name="filterExpr" type="javascript">dataSetRow["connection_id"]</expression>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Total Registros</property>
+                                <property name="dataType">float</property>
+                                <simple-property-list name="aggregateOn">
+                                    <value>Conexion</value>
+                                </simple-property-list>
+                                <property name="aggregateFunction">SUM</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                        <expression name="value" type="javascript">dataSetRow["max"]</expression>
+                                    </structure>
+                                </list-property>
+                                <expression name="filterExpr" type="javascript">dataSetRow["connection_id"]</expression>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Actividad</property>
+                                <text-property name="displayName">Actividad</text-property>
+                                <expression name="expression" type="javascript">var total = dataSetRow["sum"]&#13;
+var display = "";&#13;
+if(total >60){&#13;
+	var dias = Math.floor(total / 86400)&#13;
+	var horas = Math.floor((total % 86400)/3600)&#13;
+	var minutos = Math.floor(((total % 86400) % 3600) /60)&#13;
+	var segundos = (( total % 86400) % 3600) % 60&#13;
+	&#13;
+	display =dias + " dias " + horas + " horas " + minutos + " minutos  ";&#13;
+}else{&#13;
+	if(total==60){&#13;
+		display = "1 minuto"&#13;
+	}&#13;
+	else{&#13;
+		if (total &lt; 60 &amp;&amp; total > 0){&#13;
+			display = total + " segundos"&#13;
+		}else{&#13;
+			display = "Sin Actividad"&#13;
+		}&#13;
+	}&#13;
+}</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">parent_id</property>
+                                <text-property name="displayName">parent_id</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["parent_id"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">user_id</property>
+                                <text-property name="displayName">user_id</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["user_id"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">is_active</property>
+                                <text-property name="displayName">is_active</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["is_active"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">phone</property>
+                                <text-property name="displayName">phone</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["phone"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Activo</property>
+                                <text-property name="displayName">activo</text-property>
+                                <expression name="expression" type="javascript">var activo = dataSetRow["is_active"];&#13;
+var display = "";&#13;
+if(activo== "t"){&#13;
+	display = "Si";&#13;
+}else{&#13;
+	display = "No";&#13;
+}&#13;
+&#13;
+display;</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="pageBreakInterval">100000</property>
+                        <column id="632">
+                            <property name="width">3in</property>
+                        </column>
+                        <column id="633">
+                            <property name="width">1.0208333333333333in</property>
+                        </column>
+                        <column id="757">
+                            <property name="width">1.0208333333333333in</property>
+                        </column>
+                        <column id="764">
+                            <property name="width">1.0208333333333333in</property>
+                        </column>
+                        <column id="634">
+                            <property name="width">1.8020833333333333in</property>
+                        </column>
+                        <column id="635">
+                            <property name="width">2.0208333333333335in</property>
+                        </column>
+                        <column id="636">
+                            <property name="width">1.59375in</property>
+                        </column>
+                        <column id="637">
+                            <property name="width">0.7604166666666666in</property>
+                        </column>
+                        <column id="638">
+                            <property name="width">1.5729166666666667in</property>
+                        </column>
+                        <column id="639">
+                            <property name="width">1.3125in</property>
+                        </column>
+                        <header>
+                            <row id="731">
+                                <cell id="732">
+                                    <grid id="746">
+                                        <column id="747">
+                                            <property name="width">1.0833333333333333in</property>
+                                        </column>
+                                        <column id="748">
+                                            <property name="width">1.84375in</property>
+                                        </column>
+                                        <row id="749">
+                                            <cell id="750">
+                                                <text id="680">
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content"><![CDATA[No. de Licencias]]></text-property>
+                                                </text>
+                                            </cell>
+                                            <cell id="751">
+                                                <text id="678">
+                                                    <property name="style">NewStyle</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="fontStyle">normal</property>
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content"><![CDATA[Contratista]]></text-property>
+                                                </text>
+                                            </cell>
+                                        </row>
+                                    </grid>
+                                </cell>
+                                <cell id="733">
+                                    <label id="587">
+                                        <text-property name="text">Email</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="753">
+                                    <label id="758">
+                                        <text-property name="text">Teléfono</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="760">
+                                    <label id="765">
+                                        <text-property name="text">¿Es Activo?</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="734">
+                                    <label id="589">
+                                        <text-property name="text">Fecha de Creación</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="735">
+                                    <label id="591">
+                                        <text-property name="text">Último Inicio de Sesión</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="736">
+                                    <label id="593">
+                                        <text-property name="text">Puesto</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="737">
+                                    <label id="595">
+                                        <text-property name="text">Registros</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="738">
+                                    <label id="597">
+                                        <text-property name="text">Fecha de expiración</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="739">
+                                    <label id="599">
+                                        <text-property name="text">Minutos de Actividad</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </header>
+                        <group id="642">
+                            <property name="groupName">Conexion</property>
+                            <expression name="keyExpr" type="javascript">row["Data Set_1::first_name"]</expression>
+                            <structure name="toc">
+                                <expression name="expressionValue" type="javascript">row["Data Set_1::first_name"]</expression>
+                            </structure>
+                            <property name="hideDetail">false</property>
+                            <list-property name="sort">
+                                <structure>
+                                    <expression name="key" type="javascript">row["Data Set_1::first_name"]</expression>
+                                    <property name="direction">asc</property>
+                                    <property name="strength">-1</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="filter">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <expression name="expr" type="javascript">row["Data Set_1::first_name"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value>row["Data Set_1::first_name"]</value>
+                                    </simple-property-list>
+                                    <property name="updateAggregation">true</property>
+                                </structure>
+                            </list-property>
+                            <header>
+                                <row id="643">
+                                    <property name="color">black</property>
+                                    <cell id="644">
+                                        <property name="colSpan">7</property>
+                                        <property name="rowSpan">1</property>
+                                        <grid id="740">
+                                            <column id="741">
+                                                <property name="width">0.8in</property>
+                                            </column>
+                                            <column id="742">
+                                                <property name="width">5.90625in</property>
+                                            </column>
+                                            <row id="743">
+                                                <cell id="744">
+                                                    <data id="698">
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="textAlign">center</property>
+                                                        <property name="resultSetColumn">Aggregation</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="745">
+                                                    <data id="665">
+                                                        <property name="style">Propietario</property>
+                                                        <property name="resultSetColumn">Data Set_1::first_name</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </grid>
+                                    </cell>
+                                    <cell id="752">
+                                        <data id="728">
+                                            <property name="fontWeight">bold</property>
+                                            <property name="textAlign">center</property>
+                                            <property name="resultSetColumn">Total Registros</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="650">
+                                        <property name="colSpan">2</property>
+                                        <property name="rowSpan">1</property>
+                                    </cell>
+                                </row>
+                            </header>
+                        </group>
+                        <group id="699">
+                            <property name="groupName">Titulos</property>
+                            <expression name="keyExpr" type="javascript">row["connection_id"]</expression>
+                            <structure name="toc">
+                                <expression name="expressionValue" type="javascript">row["connection_id"]</expression>
+                            </structure>
+                            <property name="hideDetail">false</property>
+                            <header>
+                                <row id="700">
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">center</property>
+                                    <cell id="701">
+                                        <grid id="692">
+                                            <column id="693"/>
+                                            <column id="694"/>
+                                            <row id="695">
+                                                <cell id="696">
+                                                    <label id="583">
+                                                        <text-property name="text">Id de Conexión</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="697">
+                                                    <data id="604">
+                                                        <property name="resultSetColumn">connection_id</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </grid>
+                                    </cell>
+                                    <cell id="702">
+                                        <property name="colSpan">9</property>
+                                        <property name="rowSpan">1</property>
+                                    </cell>
+                                </row>
+                            </header>
+                        </group>
+                        <detail>
+                            <row id="667">
+                                <list-property name="highlightRules">
+                                    <structure>
+                                        <property name="operator">eq</property>
+                                        <property name="backgroundColor">#FF5252</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="color">#FFFFFF</property>
+                                        <expression name="testExpr" type="javascript">row["is_active"]</expression>
+                                        <simple-property-list name="value1">
+                                            <value type="javascript">"f"</value>
+                                        </simple-property-list>
+                                    </structure>
+                                </list-property>
+                                <cell id="668">
+                                    <data id="606">
+                                        <property name="resultSetColumn">empleados::first_name</property>
+                                    </data>
+                                </cell>
+                                <cell id="669">
+                                    <data id="608">
+                                        <property name="resultSetColumn">email</property>
+                                    </data>
+                                </cell>
+                                <cell id="756">
+                                    <data id="759">
+                                        <property name="resultSetColumn">phone</property>
+                                    </data>
+                                </cell>
+                                <cell id="763">
+                                    <data id="766">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">Activo</property>
+                                    </data>
+                                </cell>
+                                <cell id="670">
+                                    <data id="610">
+                                        <structure name="dateTimeFormat">
+                                            <property name="category">Custom</property>
+                                            <property name="pattern">MMMM dd, yyyy</property>
+                                        </structure>
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">created_at</property>
+                                    </data>
+                                </cell>
+                                <cell id="671">
+                                    <data id="612">
+                                        <structure name="dateTimeFormat">
+                                            <property name="category">Custom</property>
+                                            <property name="pattern">MMMM dd, yyyy</property>
+                                        </structure>
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">last_login</property>
+                                    </data>
+                                </cell>
+                                <cell id="672">
+                                    <data id="614">
+                                        <property name="resultSetColumn">position</property>
+                                    </data>
+                                </cell>
+                                <cell id="673">
+                                    <data id="616">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">max</property>
+                                    </data>
+                                </cell>
+                                <cell id="674">
+                                    <data id="618">
+                                        <structure name="dateTimeFormat">
+                                            <property name="category">Custom</property>
+                                            <property name="pattern">MMMM dd, yyyy</property>
+                                        </structure>
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">expiration</property>
+                                    </data>
+                                </cell>
+                                <cell id="675">
+                                    <data id="730">
+                                        <property name="resultSetColumn">Actividad</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </detail>
+                    </table>
+                </cell>
+            </row>
+            <row id="690">
+                <cell id="691"/>
+            </row>
+        </grid>
+    </body>
+</report>

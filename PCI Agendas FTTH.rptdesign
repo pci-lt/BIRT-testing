@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
+    <property name="units">in</property>
+    <property name="theme">ThemesReportItems31.Modern</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="Data Source" id="4">
+            <property name="datamartURL">PCI_datawarehouse</property>
+            <property name="accessType">transient</property>
+        </data-mart-data-source>
+    </data-sources>
+    <data-sets>
+        <data-mart-data-set name="Agendas" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">_id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Geolocalizacion</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Geolocalizacion</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Contratista</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Contratista</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Usuario</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Usuario</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Folio</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Folio</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Telefono</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Telefono</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Distrito</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Distrito</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Clase</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Clase</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Tecnologia</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Tecnologia</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Nombre Cliente</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Nombre Cliente</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Tipo Servicio</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Tipo Servicio</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Division</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Division</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Area</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Area</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Fecha Registro</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Fecha Registro</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Fecha Agendacion</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Fecha Agendacion</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Hora</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Hora</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Reagenda</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Reagenda</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Etapa</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Etapa</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Filial</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Filial</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">General</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">General</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Observaciones</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Observaciones</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">IP Fija</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">IP Fija</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Calle</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Calle</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Num Exterior</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Num Exterior</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Num Interior</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Num Interior</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Colonia</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Colonia</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Ciudad</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Ciudad</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Cod Pos</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Cod Pos</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Delegacion Municipio</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Delegacion Municipio</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Observaciones Tecnico</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Observaciones Tecnico</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Motivo</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Motivo</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Central</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Central</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Tipo Marcacion</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Tipo Marcacion</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Fecha Validacion</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Fecha Validacion</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Filial Asignada</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Filial Asignada</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Estatus Hoy</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Estatus Hoy</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Users::first_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">first_name</text-property>
+                    <text-property name="heading">Tecnico</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">phone</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">phone</text-property>
+                    <text-property name="heading">Telefono Tecnico</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Contratista2</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Contratista2</text-property>
+                    <text-property name="heading">Contratista2</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">_id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Geolocalizacion</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Contratista</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Usuario</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Folio</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Telefono</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Distrito</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Clase</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Tecnologia</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Nombre Cliente</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Tipo Servicio</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Division</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Area</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">Fecha Registro</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">Fecha Agendacion</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">Hora</property>
+                        <property name="dataType">time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">Reagenda</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">Etapa</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">Filial</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">General</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">Observaciones</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">IP Fija</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">Calle</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">Num Exterior</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">Num Interior</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">Colonia</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">27</property>
+                        <property name="name">Ciudad</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">28</property>
+                        <property name="name">Cod Pos</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">29</property>
+                        <property name="name">Delegacion Municipio</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">30</property>
+                        <property name="name">Observaciones Tecnico</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">31</property>
+                        <property name="name">Motivo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">32</property>
+                        <property name="name">Central</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">33</property>
+                        <property name="name">Tipo Marcacion</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">34</property>
+                        <property name="name">Fecha Validacion</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">35</property>
+                        <property name="name">Filial Asignada</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">36</property>
+                        <property name="name">Estatus Hoy</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">37</property>
+                        <property name="name">Users::first_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">38</property>
+                        <property name="name">phone</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">39</property>
+                        <property name="name">Contratista2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Agendas Users</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">_id</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Geolocalizacion</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Contratista</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Usuario</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Folio</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Telefono</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Distrito</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Clase</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Tecnologia</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Nombre Cliente</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Tipo Servicio</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Division</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Area</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">Fecha Registro</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">Fecha Agendacion</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">Hora</property>
+                    <property name="dataType">time</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">Reagenda</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">Etapa</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">Filial</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">General</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">Observaciones</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">IP Fija</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">Calle</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">Num Exterior</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">Num Interior</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">26</property>
+                    <property name="name">Colonia</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">27</property>
+                    <property name="name">Ciudad</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">28</property>
+                    <property name="name">Cod Pos</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">29</property>
+                    <property name="name">Delegacion Municipio</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">30</property>
+                    <property name="name">Observaciones Tecnico</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">31</property>
+                    <property name="name">Motivo</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">32</property>
+                    <property name="name">Central</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">33</property>
+                    <property name="name">Tipo Marcacion</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">34</property>
+                    <property name="name">Fecha Validacion</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">35</property>
+                    <property name="name">Filial Asignada</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">36</property>
+                    <property name="name">Estatus Hoy</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">37</property>
+                    <property name="name">Users::first_name</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">38</property>
+                    <property name="name">phone</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">39</property>
+                    <property name="name">Contratista2</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="orientation">auto</property>
+            <property name="height">100%</property>
+            <property name="width">100in</property>
+            <property name="headerHeight">0.5in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="6">
+            <property name="dataSet">Agendas</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">_id</property>
+                    <text-property name="displayName">_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["_id"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Geolocalizacion</property>
+                    <text-property name="displayName">Geolocalizacion</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Geolocalizacion"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Contratista</property>
+                    <text-property name="displayName">Contratista</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Contratista"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Usuario</property>
+                    <text-property name="displayName">Usuario</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Usuario"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Folio</property>
+                    <text-property name="displayName">Folio</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Folio"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Telefono</property>
+                    <text-property name="displayName">Telefono</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Telefono"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Distrito</property>
+                    <text-property name="displayName">Distrito</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Distrito"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Clase</property>
+                    <text-property name="displayName">Clase</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Clase"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Tecnologia</property>
+                    <text-property name="displayName">Tecnologia</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Tecnologia"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Nombre Cliente</property>
+                    <text-property name="displayName">Nombre Cliente</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Nombre Cliente"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Tipo Servicio</property>
+                    <text-property name="displayName">Tipo Servicio</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Tipo Servicio"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Division</property>
+                    <text-property name="displayName">Division</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Division"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Area</property>
+                    <text-property name="displayName">Area</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Area"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Fecha Registro</property>
+                    <text-property name="displayName">Fecha Registro</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Fecha Registro"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Fecha Agendacion</property>
+                    <text-property name="displayName">Fecha Agendacion</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Fecha Agendacion"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Hora</property>
+                    <text-property name="displayName">Hora</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Hora"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Reagenda</property>
+                    <text-property name="displayName">Reagenda</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Reagenda"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Etapa</property>
+                    <text-property name="displayName">Etapa</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Etapa"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Filial</property>
+                    <text-property name="displayName">Filial</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Filial"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">General</property>
+                    <text-property name="displayName">General</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["General"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Observaciones</property>
+                    <text-property name="displayName">Observaciones</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Observaciones"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">IP Fija</property>
+                    <text-property name="displayName">IP Fija</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["IP Fija"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Calle</property>
+                    <text-property name="displayName">Calle</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Calle"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Num Exterior</property>
+                    <text-property name="displayName">Num Exterior</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Num Exterior"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Num Interior</property>
+                    <text-property name="displayName">Num Interior</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Num Interior"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Colonia</property>
+                    <text-property name="displayName">Colonia</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Colonia"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Ciudad</property>
+                    <text-property name="displayName">Ciudad</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Ciudad"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Cod Pos</property>
+                    <text-property name="displayName">Cod Pos</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Cod Pos"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Delegacion Municipio</property>
+                    <text-property name="displayName">Delegacion Municipio</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Delegacion Municipio"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Observaciones Tecnico</property>
+                    <text-property name="displayName">Observaciones Tecnico</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Observaciones Tecnico"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Motivo</property>
+                    <text-property name="displayName">Motivo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Motivo"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Central</property>
+                    <text-property name="displayName">Central</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Central"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Tipo Marcacion</property>
+                    <text-property name="displayName">Tipo Marcacion</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Tipo Marcacion"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Fecha Validacion</property>
+                    <text-property name="displayName">Fecha Validacion</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Fecha Validacion"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Filial Asignada</property>
+                    <text-property name="displayName">Filial Asignada</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Filial Asignada"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Estatus Hoy</property>
+                    <text-property name="displayName">Estatus Hoy</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Estatus Hoy"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Users::first_name</property>
+                    <text-property name="displayName">first_name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Users::first_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">phone</property>
+                    <text-property name="displayName">phone</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["phone"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Contratista2</property>
+                    <text-property name="displayName">Contratista2</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Contratista2"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="sort">
+                <structure>
+                    <expression name="key" type="javascript">row["Fecha Agendacion"]</expression>
+                    <property name="direction">asc</property>
+                    <property name="strength">-1</property>
+                </structure>
+                <structure>
+                    <expression name="key" type="javascript">row["Hora"]</expression>
+                    <property name="direction">asc</property>
+                    <property name="strength">-1</property>
+                </structure>
+            </list-property>
+            <column id="206"/>
+            <column id="209"/>
+            <column id="241">
+                <property name="repeat">1</property>
+                <property name="width">4in</property>
+            </column>
+            <column id="242">
+                <property name="repeat">1</property>
+                <property name="width">1.5in</property>
+            </column>
+            <column id="243">
+                <property name="repeat">1</property>
+                <property name="width">2in</property>
+            </column>
+            <column id="213">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="214">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="215"/>
+            <column id="216"/>
+            <column id="217">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="218"/>
+            <column id="219"/>
+            <column id="220"/>
+            <column id="221"/>
+            <column id="222"/>
+            <column id="223">
+                <property name="width">0.5in</property>
+            </column>
+            <column id="224"/>
+            <column id="225">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="226"/>
+            <column id="227"/>
+            <column id="228"/>
+            <column id="229"/>
+            <column id="230">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="231">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="232">
+                <property name="width">0.8in</property>
+            </column>
+            <column id="233">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="234"/>
+            <column id="235"/>
+            <column id="236">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="237"/>
+            <column id="238"/>
+            <column id="239"/>
+            <column id="240"/>
+            <header>
+                <row id="7">
+                    <cell id="10">
+                        <label id="11">
+                            <text-property name="text">Geolocalizacion</text-property>
+                        </label>
+                    </cell>
+                    <cell id="16">
+                        <label id="17">
+                            <text-property name="text">Folio</text-property>
+                        </label>
+                    </cell>
+                    <cell id="80">
+                        <label id="81">
+                            <text-property name="text">Tecnico</text-property>
+                        </label>
+                    </cell>
+                    <cell id="82">
+                        <label id="83">
+                            <text-property name="text">Telefono Tecnico</text-property>
+                        </label>
+                    </cell>
+                    <cell id="84">
+                        <label id="85">
+                            <text-property name="text">Contratista2</text-property>
+                        </label>
+                    </cell>
+                    <cell id="24">
+                        <label id="25">
+                            <text-property name="text">Tecnologia</text-property>
+                        </label>
+                    </cell>
+                    <cell id="26">
+                        <label id="27">
+                            <text-property name="text">Nombre Cliente</text-property>
+                        </label>
+                    </cell>
+                    <cell id="28">
+                        <label id="29">
+                            <text-property name="text">Tipo Servicio</text-property>
+                        </label>
+                    </cell>
+                    <cell id="30">
+                        <label id="31">
+                            <text-property name="text">Division</text-property>
+                        </label>
+                    </cell>
+                    <cell id="32">
+                        <label id="33">
+                            <text-property name="text">Area</text-property>
+                        </label>
+                    </cell>
+                    <cell id="34">
+                        <label id="35">
+                            <text-property name="text">Fecha Registro</text-property>
+                        </label>
+                    </cell>
+                    <cell id="36">
+                        <label id="37">
+                            <text-property name="text">Fecha Agendacion</text-property>
+                        </label>
+                    </cell>
+                    <cell id="38">
+                        <label id="39">
+                            <text-property name="text">Hora</text-property>
+                        </label>
+                    </cell>
+                    <cell id="40">
+                        <label id="41">
+                            <text-property name="text">Reagenda</text-property>
+                        </label>
+                    </cell>
+                    <cell id="42">
+                        <label id="43">
+                            <text-property name="text">Etapa</text-property>
+                        </label>
+                    </cell>
+                    <cell id="44">
+                        <label id="45">
+                            <text-property name="text">Filial</text-property>
+                        </label>
+                    </cell>
+                    <cell id="46">
+                        <label id="47">
+                            <text-property name="text">General</text-property>
+                        </label>
+                    </cell>
+                    <cell id="48">
+                        <label id="49">
+                            <text-property name="text">Observaciones</text-property>
+                        </label>
+                    </cell>
+                    <cell id="50">
+                        <label id="51">
+                            <text-property name="text">IP Fija</text-property>
+                        </label>
+                    </cell>
+                    <cell id="52">
+                        <label id="53">
+                            <text-property name="text">Calle</text-property>
+                        </label>
+                    </cell>
+                    <cell id="54">
+                        <label id="55">
+                            <text-property name="text">Num Exterior</text-property>
+                        </label>
+                    </cell>
+                    <cell id="56">
+                        <label id="57">
+                            <text-property name="text">Num Interior</text-property>
+                        </label>
+                    </cell>
+                    <cell id="58">
+                        <label id="59">
+                            <text-property name="text">Colonia</text-property>
+                        </label>
+                    </cell>
+                    <cell id="60">
+                        <label id="61">
+                            <text-property name="text">Ciudad</text-property>
+                        </label>
+                    </cell>
+                    <cell id="62">
+                        <label id="63">
+                            <text-property name="text">Cod Pos</text-property>
+                        </label>
+                    </cell>
+                    <cell id="64">
+                        <label id="65">
+                            <text-property name="text">Delegacion Municipio</text-property>
+                        </label>
+                    </cell>
+                    <cell id="66">
+                        <label id="67">
+                            <text-property name="text">Observaciones Tecnico</text-property>
+                        </label>
+                    </cell>
+                    <cell id="68">
+                        <label id="69">
+                            <text-property name="text">Motivo</text-property>
+                        </label>
+                    </cell>
+                    <cell id="70">
+                        <label id="71">
+                            <text-property name="text">Central</text-property>
+                        </label>
+                    </cell>
+                    <cell id="72">
+                        <label id="73">
+                            <text-property name="text">Tipo Marcacion</text-property>
+                        </label>
+                    </cell>
+                    <cell id="74">
+                        <label id="75">
+                            <text-property name="text">Fecha Validacion</text-property>
+                        </label>
+                    </cell>
+                    <cell id="76">
+                        <label id="77">
+                            <text-property name="text">Filial Asignada</text-property>
+                        </label>
+                    </cell>
+                    <cell id="78">
+                        <label id="79">
+                            <text-property name="text">Estatus Hoy</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="86">
+                    <cell id="89">
+                        <data id="90">
+                            <property name="resultSetColumn">Geolocalizacion</property>
+                        </data>
+                    </cell>
+                    <cell id="95">
+                        <data id="96">
+                            <property name="resultSetColumn">Folio</property>
+                        </data>
+                    </cell>
+                    <cell id="159">
+                        <data id="160">
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">Users::first_name</property>
+                        </data>
+                    </cell>
+                    <cell id="161">
+                        <data id="162">
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">phone</property>
+                        </data>
+                    </cell>
+                    <cell id="163">
+                        <data id="164">
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">Contratista2</property>
+                        </data>
+                    </cell>
+                    <cell id="103">
+                        <data id="104">
+                            <property name="resultSetColumn">Tecnologia</property>
+                        </data>
+                    </cell>
+                    <cell id="105">
+                        <data id="106">
+                            <property name="resultSetColumn">Nombre Cliente</property>
+                        </data>
+                    </cell>
+                    <cell id="107">
+                        <data id="108">
+                            <property name="resultSetColumn">Tipo Servicio</property>
+                        </data>
+                    </cell>
+                    <cell id="109">
+                        <data id="110">
+                            <property name="resultSetColumn">Division</property>
+                        </data>
+                    </cell>
+                    <cell id="111">
+                        <data id="112">
+                            <property name="resultSetColumn">Area</property>
+                        </data>
+                    </cell>
+                    <cell id="113">
+                        <data id="114">
+                            <property name="resultSetColumn">Fecha Registro</property>
+                        </data>
+                    </cell>
+                    <cell id="115">
+                        <data id="116">
+                            <property name="resultSetColumn">Fecha Agendacion</property>
+                        </data>
+                    </cell>
+                    <cell id="117">
+                        <data id="118">
+                            <property name="resultSetColumn">Hora</property>
+                        </data>
+                    </cell>
+                    <cell id="119">
+                        <data id="120">
+                            <property name="resultSetColumn">Reagenda</property>
+                        </data>
+                    </cell>
+                    <cell id="121">
+                        <data id="122">
+                            <property name="resultSetColumn">Etapa</property>
+                        </data>
+                    </cell>
+                    <cell id="123">
+                        <data id="124">
+                            <property name="resultSetColumn">Filial</property>
+                        </data>
+                    </cell>
+                    <cell id="125">
+                        <data id="126">
+                            <property name="resultSetColumn">General</property>
+                        </data>
+                    </cell>
+                    <cell id="127">
+                        <data id="128">
+                            <property name="resultSetColumn">Observaciones</property>
+                        </data>
+                    </cell>
+                    <cell id="129">
+                        <data id="130">
+                            <property name="resultSetColumn">IP Fija</property>
+                        </data>
+                    </cell>
+                    <cell id="131">
+                        <data id="132">
+                            <property name="resultSetColumn">Calle</property>
+                        </data>
+                    </cell>
+                    <cell id="133">
+                        <data id="134">
+                            <property name="resultSetColumn">Num Exterior</property>
+                        </data>
+                    </cell>
+                    <cell id="135">
+                        <data id="136">
+                            <property name="resultSetColumn">Num Interior</property>
+                        </data>
+                    </cell>
+                    <cell id="137">
+                        <data id="138">
+                            <property name="resultSetColumn">Colonia</property>
+                        </data>
+                    </cell>
+                    <cell id="139">
+                        <data id="140">
+                            <property name="resultSetColumn">Ciudad</property>
+                        </data>
+                    </cell>
+                    <cell id="141">
+                        <data id="142">
+                            <property name="resultSetColumn">Cod Pos</property>
+                        </data>
+                    </cell>
+                    <cell id="143">
+                        <data id="144">
+                            <property name="resultSetColumn">Delegacion Municipio</property>
+                        </data>
+                    </cell>
+                    <cell id="145">
+                        <data id="146">
+                            <property name="resultSetColumn">Observaciones Tecnico</property>
+                        </data>
+                    </cell>
+                    <cell id="147">
+                        <data id="148">
+                            <property name="resultSetColumn">Motivo</property>
+                        </data>
+                    </cell>
+                    <cell id="149">
+                        <data id="150">
+                            <property name="resultSetColumn">Central</property>
+                        </data>
+                    </cell>
+                    <cell id="151">
+                        <data id="152">
+                            <property name="resultSetColumn">Tipo Marcacion</property>
+                        </data>
+                    </cell>
+                    <cell id="153">
+                        <data id="154">
+                            <property name="resultSetColumn">Fecha Validacion</property>
+                        </data>
+                    </cell>
+                    <cell id="155">
+                        <data id="156">
+                            <property name="resultSetColumn">Filial Asignada</property>
+                        </data>
+                    </cell>
+                    <cell id="157">
+                        <data id="158">
+                            <property name="resultSetColumn">Estatus Hoy</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="165">
+                    <cell id="167"/>
+                    <cell id="170"/>
+                    <cell id="202"/>
+                    <cell id="203"/>
+                    <cell id="204"/>
+                    <cell id="174"/>
+                    <cell id="175"/>
+                    <cell id="176"/>
+                    <cell id="177"/>
+                    <cell id="178"/>
+                    <cell id="179"/>
+                    <cell id="180"/>
+                    <cell id="181"/>
+                    <cell id="182"/>
+                    <cell id="183"/>
+                    <cell id="184"/>
+                    <cell id="185"/>
+                    <cell id="186"/>
+                    <cell id="187"/>
+                    <cell id="188"/>
+                    <cell id="189"/>
+                    <cell id="190"/>
+                    <cell id="191"/>
+                    <cell id="192"/>
+                    <cell id="193"/>
+                    <cell id="194"/>
+                    <cell id="195"/>
+                    <cell id="196"/>
+                    <cell id="197"/>
+                    <cell id="198"/>
+                    <cell id="199"/>
+                    <cell id="200"/>
+                    <cell id="201"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

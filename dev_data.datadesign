@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">mongoURI</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">ignoreURI</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">serverHost</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">serverPort</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">databaseName</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">userName</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">password</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">socketKeepAlive</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">useRequestSession</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileName</property>
+            <property name="id">4</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileStorePath</property>
+            <property name="id">4</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile" name="Infosync" id="407">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.connectionProperties</name>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.oda.profile.db.provider.id</name>
+                    <value>org.eclipse.datatools.enablement.postgresql.connectionProfile</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.savePWD</name>
+                    <value>true</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.drivers.defnType</name>
+                    <value>com.actuate.data.oda.jdbc.dbprofile.postgresql_8_x.driverTemplate</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.driverDefinitionID</name>
+                    <value>DriverDefn.com.actuate.data.oda.jdbc.dbprofile.postgresql_8_x.driverTemplate.Actuate-bundled PostgreSQL Driver Default</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.version</name>
+                    <value>8.x</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.vendor</name>
+                    <value>postgres</value>
+                </ex-property>
+            </list-property>
+            <property name="databaseName">infosync</property>
+            <property name="username">infosync</property>
+            <encrypted-property name="password" encryptionID="jce">caab65efdde92e0b</encrypted-property>
+            <property name="URL">jdbc:postgresql://localhost:5434/infosync</property>
+            <property name="driverClass">org.postgresql.Driver</property>
+            <property name="jarList">/Users/InfoSync/Documents/BRDPro/eclipse/plugins/com.actuate.data.oda.jdbc.drivers_23.0.0.v20131216/lib/postgresql/postgresql-9.2-1003.jdbc4.jar</property>
+        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.data.oda.mongodb" name="Data Source" id="4">
+            <property name="mongoURI">mongodb://elmo.linkaform.com:27017/infosync_answers_client_1259</property>
+            <property name="ignoreURI">false</property>
+            <property name="serverPort">27017</property>
+            <property name="socketKeepAlive">true</property>
+            <property name="useRequestSession">true</property>
+        </oda-data-source>
+    </data-sources>
+</datamart>

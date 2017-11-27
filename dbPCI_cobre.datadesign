@@ -1,0 +1,2420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile" name="Infosync" id="407">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.connectionProperties</name>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.oda.profile.db.provider.id</name>
+                    <value>org.eclipse.datatools.enablement.postgresql.connectionProfile</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.savePWD</name>
+                    <value>true</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.drivers.defnType</name>
+                    <value>com.actuate.data.oda.jdbc.dbprofile.postgresql_8_x.driverTemplate</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.driverDefinitionID</name>
+                    <value>DriverDefn.com.actuate.data.oda.jdbc.dbprofile.postgresql_8_x.driverTemplate.Actuate-bundled PostgreSQL Driver Default</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.version</name>
+                    <value>8.x</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.vendor</name>
+                    <value>postgres</value>
+                </ex-property>
+            </list-property>
+            <property name="databaseName">infosync</property>
+            <property name="username">infosync</property>
+            <encrypted-property name="password" encryptionID="jce">caab65efdde92e0b</encrypted-property>
+            <property name="URL">jdbc:postgresql://localhost:5434/infosync</property>
+            <property name="driverClass">org.postgresql.Driver</property>
+            <property name="jarList">/Users/InfoSync/Documents/BRDPro/eclipse/plugins/com.actuate.data.oda.jdbc.drivers_23.0.0.v20131216/lib/postgresql/postgresql-9.2-1003.jdbc4.jar</property>
+        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.data.oda.mongodb" name="MongoDB" id="4">
+            <property name="mongoURI">mongodb://127.0.0.1:27023/infosync_answers_client_1259</property>
+            <property name="ignoreURI">false</property>
+            <property name="serverPort">27017</property>
+            <property name="socketKeepAlive">true</property>
+            <property name="useRequestSession">true</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="Nombres" id="437">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Usuario</property>
+                    <expression name="expression" type="javascript">var user =row["first_name"];&#13;
+&#13;
+user = user.toLowerCase();&#13;
+&#13;
+&#13;
+user;</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Compañia</property>
+                    <expression name="expression" type="javascript">var nombre = row["first_name"]&#13;
+var empresa = "";&#13;
+if(nombre == "Alejandra Argueta")&#13;
+	empresa = "NH Redes S.A. de C.V."&#13;
+else if (nombre == "Armando Ortega")&#13;
+	empresa = "Aglaskhom Servicios S.A. de C.V."&#13;
+else if (nombre == "Beatriz Ruíz" || nombre == "Elibeth Mendez Alegria")&#13;
+	empresa = "Alta Tecnología en Telecomunicaciones Saturno S.A. de C.V."&#13;
+else if (nombre == "Emmanuel Aguilar Rios")&#13;
+	empresa = "Jorge Guerrero Lopez"&#13;
+else if (nombre == "Francisco Cesar Aguilar Muñoz")&#13;
+	empresa = "Santa Muñoz Hernandez"&#13;
+else if (nombre == "Jose Luis Canto Carrillo" || nombre == "Jose Luis Nuñez Sosa" || nombre == "Ruben Gemayel")&#13;
+	empresa = "Café Servicios Dinámicos del Sureste S.A. de C.V."&#13;
+else if (nombre == "Maria de los Angeles Romero Garcia")&#13;
+	empresa = "Instalaciones de Antenas y Redes Telefónicas"&#13;
+else if (nombre == "Felipe Sanchez")&#13;
+	empresa = "MBG Constructora S.A. de C.V."&#13;
+else if (nombre == "Olga Migdalia Garcia Peña")&#13;
+	empresa = "Sistelver S.A. de C.V."&#13;
+else if (nombre == "Fabio Leonardo Mendez Lopez" || nombre == "Jose Eutimio Perez Castillo" || nombre == "Juan Pablo Perez Damian" || nombre == "Lorenzo Ortiz Daza" || nombre == "Maria Concepcion Gonzalez Melchor" || nombre == "Oscar Rey Garciapiña Flores" || nombre == "Ramon Francisco Magaña Portilla" || nombre == "Juan Pablo Zagada" || nombre == "Aline Arlette Lozano" || nombre == "Blanca Nayeli Mujica Sarabia" || nombre == "Candido Herndan Hernández" || nombre == "Dante Ortiz Maldonado")&#13;
+	empresa = nombre;&#13;
+else if (nombre == "Fernando Espinoza Flores") {&#13;
+	empresa = "Adriana Morales Miranda";&#13;
+}&#13;
+else if (nombre == "Juan Jose Salazar") {&#13;
+	empresa = "Aglaskhom";&#13;
+}&#13;
+else if (nombre == "Juan Gomez Hernandez") {&#13;
+	empresa = "Alejandro Leal";&#13;
+}&#13;
+else if (nombre == "Nichdali Najera Peralta") {&#13;
+	empresa = "Saturno";&#13;
+}&#13;
+else if (nombre == "Paulina Rosas Soto") {&#13;
+	empresa = "Comunicación Digital Aries";&#13;
+}&#13;
+else if (nombre == "Zeidy Hernandez Vidal") {&#13;
+	empresa = "Erika Hernández Vidal";&#13;
+}&#13;
+else if (nombre == "Luis Enrique Barrera Espinosa") {&#13;
+	empresa = "Francisco Arturo Amezcua Espinosa";&#13;
+}&#13;
+else if (nombre == "Ana Cristina Peña Solorio"){&#13;
+	empresa = "Grupo Aledher"&#13;
+}&#13;
+else if (nombre == "Alejandro Ortega Zarate") {&#13;
+	empresa = "Grupo JHAS";&#13;
+}&#13;
+else if (nombre == "Jessica Vences Hernandez") {&#13;
+	empresa = "Grupo Viagus";&#13;
+}&#13;
+else if (nombre == "Jose Antonio Martinez Bahena") {&#13;
+	empresa = "IETT";&#13;
+}&#13;
+else if (nombre == "Miguel Cachoa Ocampo") {&#13;
+	empresa = "Leonor Ocampo Vargas";&#13;
+}&#13;
+else if (nombre == "Maricela Gomar Ocampo") {&#13;
+	empresa = nombre;&#13;
+}&#13;
+else if (nombre == "Adrian Cigala Esquivel") {&#13;
+	empresa = "P&amp;P";&#13;
+}&#13;
+else if (nombre == "Mario Humberto Ibañez Alba"){&#13;
+	empresa = "BRUSIM"&#13;
+}&#13;
+else if (nombre == "Víctor Hugo Rodríguez Perez") {&#13;
+	empresa = "Quetzal"&#13;
+}&#13;
+else if (nombre == "Omar Maldonado") {&#13;
+	empresa = "Rafael Ortíz Camarillos";&#13;
+}&#13;
+else if (nombre == "Alejandro Rocha Martinez") {&#13;
+	empresa = "Saira Denis Rodríguez";&#13;
+}&#13;
+else if (nombre == "Juan Carlos Solares Sandoval") {&#13;
+	empresa = "Sertel";&#13;
+}&#13;
+else if(nombre == "Juan Manuel Prieto Alvarez"){&#13;
+	empresa = "SIJ";&#13;
+}&#13;
+else if (nombre == "Javier Castillo Pantoja") {&#13;
+	empresa = "Telecomunicaciones";&#13;
+}&#13;
+else if (nombre == "Candido Herdan Hernández") {&#13;
+	empresa = "Candido Hernández";&#13;
+}&#13;
+else if (nombre == "Gerardo Rivera Chavarria" || nombre == "Jose Angel Rivera Cruz" || nombre == "Raul Huerta Jimenez" || nombre == "Rosendo Anaya Luna" || nombre == "Victor Hugo  Lopez Garcia" || nombre == "Viridiana Castillo Marin" || nombre == "Yair Arellano Mastachi") {&#13;
+	empresa = nombre;&#13;
+}&#13;
+else if (nombre == null || nombre == "") {&#13;
+	empresa = "PC Industrial"&#13;
+}&#13;
+else&#13;
+	empresa = nombre + "*";&#13;
+&#13;
+empresa</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">first_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">first_name</text-property>
+                    <text-property name="heading">first_name</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">id</text-property>
+                    <text-property name="heading">id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">position</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">position</text-property>
+                    <text-property name="heading">position</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">email</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">email</text-property>
+                    <text-property name="heading">email</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Usuario</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Compañia</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">first_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">position</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">email</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Usuario</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Compañia</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Infosync</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">first_name</property>
+                    <property name="nativeName">first_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">position</property>
+                    <property name="nativeName">position</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">email</property>
+                    <property name="nativeName">email</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT "first_name", "id", "position", "email"
+    FROM "public"."users_customuser"
+  ]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">&lt;?xml version="1.0" encoding="UTF-8"?>&#13;
+&lt;SQLQueryBuilder editorInputType="SQLBuilderStorageEditorInput" name="Nombres" version="1.0">&#13;
+&lt;SQLStatement>SELECT &amp;quot;first_name&amp;quot;, &amp;quot;id&amp;quot;, &amp;quot;position&amp;quot;, &amp;quot;email&amp;quot;&amp;#x0A;    FROM &amp;quot;public&amp;quot;.&amp;quot;users_customuser&amp;quot;&amp;#x0A;  &lt;/SQLStatement>&#13;
+&lt;connInfo>postgres_8.x:Transient.org.eclipse.datatools.enablement.postgresql.connectionProfile:infosync:infosync&lt;/connInfo>&#13;
+&lt;omitSchemaInfo>false:true:&lt;/omitSchemaInfo>&#13;
+&lt;editorInputUsageOptions>useWindowState=true&lt;/editorInputUsageOptions>&#13;
+&lt;windowState height="530" version="1.0" width="1116">&#13;
+&lt;control height="139" isHideable="true" isVisible="true" name="SQLSourceViewer" width="1089"/>&#13;
+&lt;control height="187" isHideable="true" isVisible="true" name="DesignViewer" width="1102"/>&#13;
+&lt;control height="166" isHideable="true" isVisible="true" name="GraphControl" width="1094"/>&#13;
+&lt;control height="170" isHideable="true" isVisible="false" name="OutlineViewer" width="101"/>&#13;
+&lt;/windowState>&#13;
+&lt;/SQLQueryBuilder></property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>id</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>password</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>128</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>password</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>password</design:label>
+            <design:formattingHints>
+              <design:displaySize>128</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>last_login</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>35</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>last_login</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>last_login</design:label>
+            <design:formattingHints>
+              <design:displaySize>35</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>is_superuser</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-7</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>is_superuser</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>is_superuser</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>username</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>75</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>username</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>username</design:label>
+            <design:formattingHints>
+              <design:displaySize>75</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>first_name</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>first_name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>first_name</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>last_name</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>30</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>last_name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>last_name</design:label>
+            <design:formattingHints>
+              <design:displaySize>30</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>email</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>75</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>email</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>email</design:label>
+            <design:formattingHints>
+              <design:displaySize>75</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>is_staff</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-7</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>is_staff</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>is_staff</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>is_active</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-7</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>is_active</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>is_active</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>date_joined</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>35</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>date_joined</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>date_joined</design:label>
+            <design:formattingHints>
+              <design:displaySize>35</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>deleted_at</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>35</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>deleted_at</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>deleted_at</design:label>
+            <design:formattingHints>
+              <design:displaySize>35</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>created_at</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>35</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>created_at</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>created_at</design:label>
+            <design:formattingHints>
+              <design:displaySize>35</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>updated_at</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>35</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>updated_at</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>updated_at</design:label>
+            <design:formattingHints>
+              <design:displaySize>35</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>profile_picture</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>profile_picture</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>profile_picture</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>thumb</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>thumb</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>thumb</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>phone</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>20</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>phone</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>phone</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>position</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>position</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>position</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>parent_id</design:name>
+              <design:position>19</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>parent_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>parent_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>created_by_id</design:name>
+              <design:position>20</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>created_by_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>created_by_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>updated_by_id</design:name>
+              <design:position>21</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>updated_by_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>updated_by_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>last_logout</design:name>
+              <design:position>22</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>35</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>last_logout</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>last_logout</design:label>
+            <design:formattingHints>
+              <design:displaySize>35</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>is_online</design:name>
+              <design:position>23</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-7</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>is_online</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>is_online</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>lang</design:name>
+              <design:position>24</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>6</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>lang</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>lang</design:label>
+            <design:formattingHints>
+              <design:displaySize>6</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>social_email</design:name>
+              <design:position>25</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>254</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>social_email</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>social_email</design:label>
+            <design:formattingHints>
+              <design:displaySize>254</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>social_id</design:name>
+              <design:position>26</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>254</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>social_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>social_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>254</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>social_network</design:name>
+              <design:position>27</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>254</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>social_network</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>social_network</design:label>
+            <design:formattingHints>
+              <design:displaySize>254</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>timezone</design:name>
+              <design:position>28</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>254</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>timezone</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>timezone</design:label>
+            <design:formattingHints>
+              <design:displaySize>254</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>company_logo</design:name>
+              <design:position>29</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>company_logo</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>company_logo</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria>
+        <design:rowOrdering/>
+      </design:criteria>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.mongodb.dataSet" name="Precios" id="511">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">producto</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">producto</text-property>
+                    <text-property name="heading">producto</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">precio_contratista</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">precio_contratista</text-property>
+                    <text-property name="heading">precio_contratista</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">precio_pc</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">precio_pc</text-property>
+                    <text-property name="heading">precio_pc</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">producto</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">precio_contratista</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">precio_pc</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">MongoDB</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">producto</property>
+                    <property name="nativeName">producto</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">precio_contratista</property>
+                    <property name="nativeName">precio_contratista</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">precio_pc</property>
+                    <property name="nativeName">precio_pc</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{ "operationExpr" : "[{$match:{\r\n\t form_id:14620,\r\n\tdeleted_at:{$exists:false},\r\n}},\r\n{$project:{\r\n  producto: '$answers.abc00000000000000000a001',\r\n  precio_contratista: '$answers.ccc00000000000000000c001',\r\n  precio_pc: '$answers.bbb00000000000000000b001'\r\n}}\r\n\r\n]" , "queryReadPreference" : "secondaryPreferred" , "operationType" : "AGGREGATE" , "selectedFields" : [ "producto" , "precio_contratista" , "precio_pc"] , "collectionName" : "form_answer"}]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">false,1000000000</property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>_id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>7</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="Conexiones" id="425">
+            <property name="isVisible">true</property>
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">connection_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">connection_id</text-property>
+                    <text-property name="heading">connection_id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">connection_id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Infosync</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">connection_id</property>
+                    <property name="nativeName">connection_id</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT "connection_id"
+    FROM "public"."plans_license"
+    WHERE "owner_id" = 1259 AND "connection_id" <> 1259
+    GROUP BY "connection_id"
+  ]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">&lt;?xml version="1.0" encoding="UTF-8"?>&#13;
+&lt;SQLQueryBuilder editorInputType="SQLBuilderStorageEditorInput" name="connectios" version="1.0">&#13;
+&lt;SQLStatement>SELECT &amp;quot;connection_id&amp;quot;&amp;#x0A;    FROM &amp;quot;public&amp;quot;.&amp;quot;plans_license&amp;quot;&amp;#x0A;    WHERE &amp;quot;owner_id&amp;quot; = 1259 AND &amp;quot;connection_id&amp;quot; &amp;lt;&amp;gt; 1259&amp;#x0A;    GROUP BY &amp;quot;connection_id&amp;quot;&amp;#x0A;  &lt;/SQLStatement>&#13;
+&lt;connInfo>postgres_8.x:Transient.org.eclipse.datatools.enablement.postgresql.connectionProfile:infosync:infosync&lt;/connInfo>&#13;
+&lt;omitSchemaInfo>false:true:&lt;/omitSchemaInfo>&#13;
+&lt;editorInputUsageOptions>useWindowState=true&lt;/editorInputUsageOptions>&#13;
+&lt;windowState height="546" version="1.0" width="1138">&#13;
+&lt;control height="96" isHideable="true" isVisible="true" name="SQLSourceViewer" width="1111"/>&#13;
+&lt;control height="189" isHideable="true" isVisible="true" name="DesignViewer" width="1124"/>&#13;
+&lt;control height="223" isHideable="true" isVisible="true" name="GraphControl" width="1116"/>&#13;
+&lt;control height="227" isHideable="true" isVisible="false" name="OutlineViewer" width="117"/>&#13;
+&lt;/windowState>&#13;
+&lt;/SQLQueryBuilder></property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>user_id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>user_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>user_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>owner_id</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>owner_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>owner_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>connection_id</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>connection_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>connection_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria>
+        <design:rowOrdering/>
+      </design:criteria>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.mongodb.dataSet" name="Bolsa cobre" id="512">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">problemas cliente</property>
+                    <expression name="expression" type="javascript">var estatus = row["_id.estatus"];&#13;
+var display = 0;&#13;
+var cantidad = row["cantidad"];&#13;
+&#13;
+if(estatus == "cliente_no_se_localiza"){&#13;
+	display = cantidad;&#13;
+}&#13;
+&#13;
+display;</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">problemas tecnicos</property>
+                    <expression name="expression" type="javascript">var estatus = row["_id.estatus"];&#13;
+var display = 0;&#13;
+var cantidad = row["cantidad"];&#13;
+&#13;
+if(estatus == "objetada" || estatus == "pendiente_de_trabajo"){&#13;
+	display = cantidad;&#13;
+}&#13;
+&#13;
+display;</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">liquidadas</property>
+                    <expression name="expression" type="javascript">var estatus = row["_id.estatus"];&#13;
+var display = 0;&#13;
+var cantidad = row["cantidad"];&#13;
+&#13;
+if(estatus == "liquidada"){&#13;
+	display = cantidad;&#13;
+}&#13;
+&#13;
+display;</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">area</property>
+                    <expression name="expression" type="javascript">var area = row["_id.area"];&#13;
+if(area == null){&#13;
+	area = " ";&#13;
+}&#13;
+area = area.toUpperCase();&#13;
+var arr = area.split('_');&#13;
+var resultado = '';&#13;
+for (var i = 0; i &lt;arr.length;i++){&#13;
+var te =  (new Packages.java.lang.String(arr[i]));&#13;
+	resultado = resultado +  new Packages.java.lang.Character.toString(te.charAt(0)).toUpperCase() + te.substring(1);&#13;
+	if (i &lt; arr.length - 1) {&#13;
+		resultado = resultado + ' ';&#13;
+	}&#13;
+}&#13;
+resultado;</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">cope</property>
+                    <expression name="expression" type="javascript">var area = row["_id.cope"];&#13;
+if(area == null){&#13;
+	area = " ";&#13;
+}&#13;
+area = area.toUpperCase();&#13;
+var arr = area.split('_');&#13;
+var resultado = '';&#13;
+for (var i = 0; i &lt;arr.length;i++){&#13;
+var te =  (new Packages.java.lang.String(arr[i]));&#13;
+	resultado = resultado +  new Packages.java.lang.Character.toString(te.charAt(0)).toUpperCase() + te.substring(1);&#13;
+	if (i &lt; arr.length - 1) {&#13;
+		resultado = resultado + ' ';&#13;
+	}&#13;
+}&#13;
+resultado;</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Activacion claro video</property>
+                    <expression name="expression" type="javascript">var claro = row["_id.activ_cv"];&#13;
+var display = 0;&#13;
+if(claro == "activado")&#13;
+	display = 1;&#13;
+else&#13;
+	display = 0;&#13;
+&#13;
+display;</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">_id.area</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_id.area</text-property>
+                    <text-property name="heading">_id.area</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">_id.cope</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_id.cope</text-property>
+                    <text-property name="heading">_id.cope</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">_id.estatus</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_id.estatus</text-property>
+                    <text-property name="heading">_id.estatus</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">_id.activ_cv</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_id.activ_cv</text-property>
+                    <text-property name="heading">_id.activ_cv</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">cantidad</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">cantidad</text-property>
+                    <text-property name="heading">cantidad</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">problemas cliente</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">problemas tecnicos</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">liquidadas</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">area</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">cope</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Activacion claro video</property>
+                    <property name="analysis">measure</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">_id.area</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">_id.cope</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">_id.estatus</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">_id.activ_cv</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">cantidad</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">problemas cliente</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">problemas tecnicos</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">liquidadas</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">area</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">cope</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Activacion claro video</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <method name="beforeOpen"><![CDATA[//pring logs
+importPackage(Packages.java.lang);
+function log(msg){
+    System.out.println(msg);
+}
+reportContext.setGlobalVariable('log', log);
+
+var query = this.queryText.toString();
+var fecha = params["Fecha Inicial"].value;
+
+
+var bookmark = "{$exists:false},";
+	
+	var date_to = BirtDateTime.addDay(fecha, 1);
+	var year_to = BirtDateTime.year(date_to);
+	var month_to = BirtDateTime.month(date_to);
+	if(month_to < 10)
+		month_to = '0' + month_to;
+	var day_to = BirtDateTime.day(date_to);
+	var new_query = "created_at: {$gte: {$date:'"+ fecha + "T05:00:01Z' } , $lte : { $date: '" + year_to + "-" + month_to + "-" + day_to + "T06:00:01Z' }},";
+
+
+log('new query= ' + new_query)
+
+query = query.replace(bookmark, bookmark + new_query );
+this.queryText = query;
+
+log('query' + query);]]></method>
+            <property name="dataSource">MongoDB</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">_id.area</property>
+                    <property name="nativeName">_id.area</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">_id.cope</property>
+                    <property name="nativeName">_id.cope</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">_id.estatus</property>
+                    <property name="nativeName">_id.estatus</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">_id.activ_cv</property>
+                    <property name="nativeName">_id.activ_cv</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">cantidad</property>
+                    <property name="nativeName">cantidad</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">16</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{ "operationExpr" : "[{$match:{\r\n\t form_id: { $in: [10540]},\r\n\tdeleted_at:{$exists:false},\r\n}},\r\n\r\n{$group: {_id:{\r\n\t\tarea: '$answers.f1054000a0100000000000a2',\r\n\t\tcope: '$answers.f1054000a010000000000002',\r\n\t\tactiv_cv: '$answers.59fcb008b43fdd4c43fb085e',\r\n\t\testatus: '$answers.f1054000a030000000000002',\r\n\r\n\t},\r\n\tcantidad: {$sum:1}\r\n}}\r\n\r\n]" , "queryReadPreference" : "secondaryPreferred" , "operationType" : "AGGREGATE" , "selectedFields" : [ "_id.area" , "_id.cope" , "_id.estatus" , "_id.activ_cv" , "cantidad"] , "collectionName" : "form_answer"}]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">false,1000000000</property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>_id.cope</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>_id.cope</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>_id.cope</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>_id.estatus</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>_id.estatus</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>_id.estatus</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>cantidad</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>cantidad</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>cantidad</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.mongodb.dataSet" name="Bolsa y usuarios" id="513">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">no_tecnicos</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">no_tecnicos</text-property>
+                    <text-property name="heading">no_tecnicos</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">registros_apro</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">registros_apro</text-property>
+                    <text-property name="heading">registros_apro</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">cope</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">cope</text-property>
+                    <text-property name="heading">cope</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">no_tecnicos</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">registros_apro</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">cope</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <method name="beforeOpen"><![CDATA[//pring logs
+importPackage(Packages.java.lang);
+function log(msg){
+    System.out.println(msg);
+}
+reportContext.setGlobalVariable('log', log);
+
+var query = this.queryText.toString();
+var fecha = params["Fecha Inicial"].value;
+
+
+var bookmark = "{$exists:false},";
+	
+	var date_to = BirtDateTime.addDay(fecha, 1);
+	var year_to = BirtDateTime.year(date_to);
+	var month_to = BirtDateTime.month(date_to);
+	if(month_to < 10)
+		month_to = '0' + month_to;
+	var day_to = BirtDateTime.day(date_to);
+	var new_query = "created_at: {$gte: {$date:'"+ fecha + "T05:00:01Z' } , $lte : { $date: '" + year_to + "-" + month_to + "-" + day_to + "T06:00:01Z' }},";
+
+
+log('new query= ' + new_query)
+
+query = query.replace(bookmark, bookmark + new_query );
+this.queryText = query;
+
+log('query' + query);]]></method>
+            <property name="dataSource">MongoDB</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">no_tecnicos</property>
+                    <property name="nativeName">no_tecnicos</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">16</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">registros_apro</property>
+                    <property name="nativeName">registros_apro</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">16</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">cope</property>
+                    <property name="nativeName">cope</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{ "operationExpr" : "[{$match:{\r\n\tform_id:13048,\r\n\tdeleted_at:{$exists:false},\r\n\t'answers.f1074100a010000000000cc2': {$exists: true},\r\n\t\r\n}},\r\n\r\n{$project: {\t\r\n\t\r\n\tno_tecnicos: '$answers.f1074100a010000000000cc2',\r\n\tcope: '$answers.f1074100a010000000000cc1',\r\n\tregistros_apro: '$answers.f1074100a010000000000a14',\r\n\t\r\n\r\n\r\n\r\n\t\t\r\n}}\r\n\r\n\r\n\r\n]" , "queryReadPreference" : "secondaryPreferred" , "operationType" : "AGGREGATE" , "selectedFields" : [ "no_tecnicos" , "registros_apro" , "cope"] , "collectionName" : "form_answer"}]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">false,1000000000</property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>no_tecnicos</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>no_tecnicos</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>no_tecnicos</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>registros_apro</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>registros_apro</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>registros_apro</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <derived-data-set extensionID="com.actuate.birt.data.join" name="Join Bolsa - Tecnicos" id="514">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">problemas cliente</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">problemas tecnicos</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">liquidadas</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Activacion claro video</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">no_tecnicos</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">no_tecnicos</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">registros_apro</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">registros_apro</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">problemas cliente</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">problemas tecnicos</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">liquidadas</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">area</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">cope</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Activacion claro video</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">no_tecnicos</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">registros_apro</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">subdir_m</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">div_m</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <simple-property-list name="inputDataSets">
+                <value>Bolsa cobre</value>
+                <value>Bolsa y usuarios</value>
+                <value>Sub-Div-A-C</value>
+            </simple-property-list>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tns:joinedDataSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.actuate.com/birt/dataset_join.xsd" xmlns:tns="http://schemas.actuate.com/birt/dataset_join.xsd">
+<tns:selectColumns>
+<tns:Column>Bolsa cobre::problemas cliente</tns:Column>
+<tns:Column>Bolsa cobre::problemas tecnicos</tns:Column>
+<tns:Column>Bolsa cobre::liquidadas</tns:Column>
+<tns:Column>Bolsa cobre::area</tns:Column>
+<tns:Column>Bolsa cobre::cope</tns:Column>
+<tns:Column>Bolsa cobre::Activacion claro video</tns:Column>
+<tns:Column>Bolsa y usuarios::no_tecnicos</tns:Column>
+<tns:Column>Bolsa y usuarios::registros_apro</tns:Column>
+<tns:Column>Sub-Div-A-C::subdir_m</tns:Column>
+<tns:Column>Sub-Div-A-C::div_m</tns:Column>
+</tns:selectColumns>
+<tns:joins>
+<tns:startingDataSet Index="0" name="Bolsa cobre"/>
+<tns:join>
+<tns:type>leftOuter</tns:type>
+<tns:dataSet Index="1" name="Bolsa y usuarios"/>
+<tns:on>
+<tns:condition>
+<tns:leftColumn>Bolsa cobre::cope</tns:leftColumn>
+<tns:rightColumn>Bolsa y usuarios::cope</tns:rightColumn>
+<tns:operator>eq</tns:operator>
+</tns:condition>
+</tns:on>
+</tns:join>
+<tns:join>
+<tns:type>leftOuter</tns:type>
+<tns:dataSet Index="2" name="Sub-Div-A-C"/>
+<tns:on>
+<tns:condition>
+<tns:leftColumn>Bolsa y usuarios::cope</tns:leftColumn>
+<tns:rightColumn>Sub-Div-A-C::cope</tns:rightColumn>
+<tns:operator>eq</tns:operator>
+</tns:condition>
+</tns:on>
+</tns:join>
+</tns:joins>
+</tns:joinedDataSet>]]></xml-property>
+        </derived-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.mongodb.dataSet" name="Sub-Div-A-C" id="515">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">subdir_m</property>
+                    <expression name="expression" type="javascript">var area = row["subdir"];&#13;
+if(area == null){&#13;
+	area = " ";&#13;
+}&#13;
+area = area.toUpperCase();&#13;
+var arr = area.split('_');&#13;
+var resultado = '';&#13;
+for (var i = 0; i &lt;arr.length;i++){&#13;
+var te =  (new Packages.java.lang.String(arr[i]));&#13;
+	resultado = resultado +  new Packages.java.lang.Character.toString(te.charAt(0)).toUpperCase() + te.substring(1);&#13;
+	if (i &lt; arr.length - 1) {&#13;
+		resultado = resultado + ' ';&#13;
+	}&#13;
+}&#13;
+resultado;</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">div_m</property>
+                    <expression name="expression" type="javascript">var area = row["div"];&#13;
+if(area == null){&#13;
+	area = " ";&#13;
+}&#13;
+area = area.toUpperCase();&#13;
+var arr = area.split('_');&#13;
+var resultado = '';&#13;
+for (var i = 0; i &lt;arr.length;i++){&#13;
+var te =  (new Packages.java.lang.String(arr[i]));&#13;
+	resultado = resultado +  new Packages.java.lang.Character.toString(te.charAt(0)).toUpperCase() + te.substring(1);&#13;
+	if (i &lt; arr.length - 1) {&#13;
+		resultado = resultado + ' ';&#13;
+	}&#13;
+}&#13;
+resultado;</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">div</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">div</text-property>
+                    <text-property name="heading">div</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">subdir</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">subdir</text-property>
+                    <text-property name="heading">subdir</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">area</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">area</text-property>
+                    <text-property name="heading">area</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">cope</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">cope</text-property>
+                    <text-property name="heading">cope</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">subdir_m</property>
+                    <property name="analysis">dimension</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">div_m</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">div</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">subdir</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">area</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">cope</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">subdir_m</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">div_m</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">MongoDB</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">div</property>
+                    <property name="nativeName">div</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">subdir</property>
+                    <property name="nativeName">subdir</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">area</property>
+                    <property name="nativeName">area</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">cope</property>
+                    <property name="nativeName">cope</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{ "operationExpr" : "[{$match:{\r\n\tform_id:15616,\r\n\tdeleted_at:{$exists:false},\t\r\n}},\r\n\r\n{$project: {\t\r\n\tdiv: '$answers.5a04ef1bb43fdd1023e5f4c7',\r\n\tsubdir: '$answers.5a04ef1bb43fdd1023e5f4c8',\r\n\tarea: '$answers.5952c6ffb43fdd2c5fdd5378',\r\n\tcope: '$answers.5a04f8fdf851c270c84c2e92',\r\n\r\n\t\r\n\r\n\r\n\r\n\t\t\r\n}}\r\n\r\n\r\n\r\n]" , "queryReadPreference" : "secondaryPreferred" , "operationType" : "AGGREGATE" , "selectedFields" : [ "div" , "subdir" , "area" , "cope"] , "collectionName" : "form_answer"}]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">false,1000000000</property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>division</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>division</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>division</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>subdir</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>subdir</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>subdir</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>area</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>area</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>area</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>cope</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>cope</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>cope</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.mongodb.dataSet" name="Produccion cobre" id="516">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">_id.cope</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_id.cope</text-property>
+                    <text-property name="heading">_id.cope</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">cantidad</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">cantidad</text-property>
+                    <text-property name="heading">cantidad</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">_id.cope</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">cantidad</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <method name="beforeOpen"><![CDATA[//pring logs
+importPackage(Packages.java.lang);
+function log(msg){
+    System.out.println(msg);
+}
+reportContext.setGlobalVariable('log', log);
+
+var query = this.queryText.toString();
+var fecha = params["Fecha Inicial"].value;
+
+
+var bookmark = "{$exists:false},";
+	
+	var date_to = BirtDateTime.addDay(fecha, 1);
+	var year_to = BirtDateTime.year(date_to);
+	var month_to = BirtDateTime.month(date_to);
+	if(month_to < 10)
+		month_to = '0' + month_to;
+	var day_to = BirtDateTime.day(date_to);
+	var new_query = "created_at: {$gte: {$date:'"+ fecha + "T05:00:01Z' } , $lte : { $date: '" + year_to + "-" + month_to + "-" + day_to + "T06:00:01Z' }},";
+
+
+log('new query= ' + new_query)
+
+query = query.replace(bookmark, bookmark + new_query );
+this.queryText = query;
+
+log('query' + query);]]></method>
+            <property name="dataSource">MongoDB</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">_id.cope</property>
+                    <property name="nativeName">_id.cope</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">cantidad</property>
+                    <property name="nativeName">cantidad</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">16</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{ "operationExpr" : "[{$match:{\r\n\t form_id: { $in: [10540]},\r\n\tdeleted_at:{$exists:false},\r\n}},\r\n\r\n{$group: {_id:{\r\n\t\tcope: '$answers.f1054000a010000000000002',\r\n\r\n\t},\r\n\tcantidad: {$sum:1}\r\n}}\r\n\r\n]" , "queryReadPreference" : "secondaryPreferred" , "operationType" : "AGGREGATE" , "selectedFields" : [ "_id.cope" , "cantidad"] , "collectionName" : "form_answer"}]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">false,1000000000</property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>_id.cope</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>_id.cope</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>_id.cope</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>cantidad</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>cantidad</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>cantidad</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.mongodb.dataSet" name="Carga Cobre" id="517">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">values</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">values</text-property>
+                    <text-property name="heading">values</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">values</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">MongoDB</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">values</property>
+                    <property name="nativeName">values</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{ "operationExpr" : "{\r\n\tdistinct:'form_answer',\r\n\tkey:'answers.f1054000a010000000000002',\r\n\tquery:{ form_id: 10540 }\r\n\r\n}" , "queryReadPreference" : "secondaryPreferred" , "operationType" : "RUN_DB_COMMAND" , "flattenCollections" : true , "selectedFields" : [ "values"]}]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">false,100000000</property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>values</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>values</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>values</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <derived-data-set extensionID="com.actuate.birt.data.join" name="Join Producción cobre - Carga Cobre" id="518">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Cantidad completa</property>
+                    <expression name="expression" type="javascript">var cantidad;&#13;
+if(row["cantidad"] != null){&#13;
+	cantidad = row["cantidad"]	;&#13;
+}else{&#13;
+	cantidad = 0;&#13;
+}&#13;
+&#13;
+cantidad</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Con carga</property>
+                    <expression name="expression" type="javascript">var carga="";&#13;
+if(row["Cantidad completa"] != 0){&#13;
+	carga= "Si"	&#13;
+}else{&#13;
+	carga = "No"&#13;
+}&#13;
+&#13;
+carga</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Cope</property>
+                    <expression name="expression" type="javascript">var area = row["_id.cope"];&#13;
+if(area == null || area == ""){&#13;
+	area = row["values"];&#13;
+}&#13;
+area = area.toUpperCase();&#13;
+var arr = area.split('_');&#13;
+var resultado = '';&#13;
+for (var i = 0; i &lt;arr.length;i++){&#13;
+var te =  (new Packages.java.lang.String(arr[i]));&#13;
+	resultado = resultado +  new Packages.java.lang.Character.toString(te.charAt(0)).toUpperCase() + te.substring(1);&#13;
+	if (i &lt; arr.length - 1) {&#13;
+		resultado = resultado + ' ';&#13;
+	}&#13;
+}&#13;
+resultado;</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">cantidad</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">cantidad</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">values</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">values</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Cantidad completa</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Con carga</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Cope</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">_id.cope</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">cantidad</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">values</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Cantidad completa</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Con carga</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Cope</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <simple-property-list name="inputDataSets">
+                <value>Produccion cobre</value>
+                <value>Carga Cobre</value>
+            </simple-property-list>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tns:joinedDataSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.actuate.com/birt/dataset_join.xsd" xmlns:tns="http://schemas.actuate.com/birt/dataset_join.xsd">
+<tns:selectColumns>
+<tns:Column>Produccion cobre::_id.cope</tns:Column>
+<tns:Column>Produccion cobre::cantidad</tns:Column>
+<tns:Column>Carga Cobre::values</tns:Column>
+</tns:selectColumns>
+<tns:joins>
+<tns:startingDataSet Index="0" name="Produccion cobre"/>
+<tns:join>
+<tns:type>rightOuter</tns:type>
+<tns:dataSet Index="1" name="Carga Cobre"/>
+<tns:on>
+<tns:condition>
+<tns:leftColumn>Produccion cobre::_id.cope</tns:leftColumn>
+<tns:rightColumn>Carga Cobre::values</tns:rightColumn>
+<tns:operator>eq</tns:operator>
+</tns:condition>
+</tns:on>
+</tns:join>
+</tns:joins>
+</tns:joinedDataSet>]]></xml-property>
+        </derived-data-set>
+    </data-sets>
+    <parameters>
+        <scalar-parameter name="Fecha Inicial" id="422">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2017-11-13</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+</datamart>

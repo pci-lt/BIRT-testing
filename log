@@ -1,0 +1,75 @@
+[33mcommit 643a05f1358dab16e123b0208c30befe05740496[m
+Merge: abce038 1254d0a
+Author: pci-lt <ltorres@pcindustrial.com.mx>
+Date:   Thu Jun 1 09:43:08 2017 -0500
+
+    Merge pull request #3 from pci-lt/Reporte-de-Producción
+    
+    Reportes de Producción.
+
+[33mcommit 1254d0aac6dd3d5fa410b3e47544d715e7885e4f[m
+Author: pci-lt <ltorres@pcindustrial.com.mx>
+Date:   Thu Jun 1 09:42:40 2017 -0500
+
+    Reportes de Producción.
+    
+    Reportes de producción listos para publicarse.
+
+[33mcommit abce0382a1c6be910cd83e74372d2c0029e95636[m
+Author: Luis Torres <ltorres@pcindustrial.com.mx>
+Date:   Tue May 30 16:30:16 2017 -0500
+
+    Cambio de Query
+    
+    Se hizo la actualización agregando el filtro para que no salgan los ya eliminados.
+
+[33mcommit ba8f266d564482da699e8450d83565398d93f2b5[m
+Author: erick <erickhillo@linkaform.com>
+Date:   Tue May 30 16:17:10 2017 -0500
+
+    renombre de archivos
+
+[33mcommit 42d47e5b77d2b29164f9c58483291f5277b864b9[m
+Merge: 559ff5d 96579d5
+Author: pci-lt <ltorres@pcindustrial.com.mx>
+Date:   Tue May 30 11:38:55 2017 -0500
+
+    Reporte-de-usuario-y-conexiones-terminado
+    
+    Estos son los reportes para subir.
+
+[33mcommit 96579d5e7dfa6e63339abe60b5c00ce64a035655[m
+Author: pci-lt <ltorres@pcindustrial.com.mx>
+Date:   Tue May 30 11:38:13 2017 -0500
+
+    Estos son los reportes para subir.
+    
+    EjemploPCI.rptdesing = Reporte de usuarios.
+    EjemploPCI 2.rptdesing = Reporte de conexiones.
+
+[33mcommit 559ff5d887fb91e0fd00093dee16780392174098[m
+Author: Luis Torres <ltorres@pcindustrial.com.mx>
+Date:   Fri May 26 11:43:07 2017 -0500
+
+    Cambios de conexión
+
+[33mcommit 351be40ef3df5a1fc2f649593e80f008351ef05a[m
+Merge: 4458156 4f17950
+Author: pci-lt <ltorres@pcindustrial.com.mx>
+Date:   Fri May 26 09:18:41 2017 -0500
+
+    Merge pull request #1 from pci-lt/Upload-files
+    
+    Add files via upload
+
+[33mcommit 4f17950cf5b86d7ae0bed88ce10e57e091a8f8f2[m
+Author: pci-lt <ltorres@pcindustrial.com.mx>
+Date:   Fri May 26 09:11:59 2017 -0500
+
+    Add files via upload
+
+[33mcommit 445815607a59e4454af9aaca20cf8ed0f7a2a00e[m
+Author: pci-lt <ltorres@pcindustrial.com.mx>
+Date:   Fri May 26 09:10:52 2017 -0500
+
+    Initial commit

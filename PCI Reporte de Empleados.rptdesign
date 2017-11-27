@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150710-0101 Build &lt;4.2.3.v20150710-0101></property>
+    <property name="units">in</property>
+    <property name="theme">ThemesReportItems31.Modern</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="pci_1259" id="4">
+            <property name="datamartURL">PCI_datawarehouse</property>
+            <property name="accessType">transient</property>
+        </data-mart-data-source>
+    </data-sources>
+    <data-sets>
+        <data-mart-data-set name="empleados" id="11">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">nombre</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">nombre</text-property>
+                    <text-property name="heading">nombre</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">zona</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">zona</text-property>
+                    <text-property name="heading">zona</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">jefe_directo</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">jefe_directo</text-property>
+                    <text-property name="heading">jefe_directo</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">numero_empleado</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">numero_empleado</text-property>
+                    <text-property name="heading">numero_empleado</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">departamento</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">departamento</text-property>
+                    <text-property name="heading">departamento</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">fecha_ingreso</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">fecha_ingreso</text-property>
+                    <text-property name="heading">fecha_ingreso</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">celular_empresa</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">celular_empresa</text-property>
+                    <text-property name="heading">celular_empresa</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">placas</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">placas</text-property>
+                    <text-property name="heading">placas</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">serie_equipo</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">serie_equipo</text-property>
+                    <text-property name="heading">serie_equipo</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">nombre</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">zona</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">jefe_directo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">numero_empleado</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">departamento</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">fecha_ingreso</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">celular_empresa</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">placas</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">serie_equipo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">pci_1259</property>
+            <property name="dataObject">alta_empleado</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">nombre</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">zona</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">jefe_directo</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">numero_empleado</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">departamento</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">fecha_ingreso</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">celular_empresa</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">placas</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">serie_equipo</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="5">
+            <column id="6"/>
+            <row id="7">
+                <cell id="8">
+                    <table id="12">
+                        <property name="marginLeft">20pt</property>
+                        <property name="width">80%</property>
+                        <property name="dataSet">empleados</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">nombre</property>
+                                <text-property name="displayName">nombre</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["nombre"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">zona</property>
+                                <text-property name="displayName">zona</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["zona"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">jefe_directo</property>
+                                <text-property name="displayName">jefe_directo</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["jefe_directo"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">numero_empleado</property>
+                                <text-property name="displayName">numero_empleado</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["numero_empleado"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">departamento</property>
+                                <text-property name="displayName">departamento</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["departamento"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">fecha_ingreso</property>
+                                <text-property name="displayName">fecha_ingreso</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["fecha_ingreso"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">celular_empresa</property>
+                                <text-property name="displayName">celular_empresa</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["celular_empresa"]</expression>
+                                <property name="dataType">integer</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">placas</property>
+                                <text-property name="displayName">placas</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["placas"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">serie_equipo</property>
+                                <text-property name="displayName">serie_equipo</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["serie_equipo"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <list-property name="sort">
+                            <structure>
+                                <expression name="key" type="javascript">row["fecha_ingreso"]</expression>
+                                <property name="direction">desc</property>
+                                <property name="strength">-1</property>
+                            </structure>
+                        </list-property>
+                        <column id="61">
+                            <property name="width">6%</property>
+                        </column>
+                        <column id="62">
+                            <property name="width">24%</property>
+                        </column>
+                        <column id="63">
+                            <property name="width">10%</property>
+                        </column>
+                        <column id="64">
+                            <property name="width">10%</property>
+                        </column>
+                        <column id="65">
+                            <property name="width">6%</property>
+                        </column>
+                        <column id="66">
+                            <property name="width">20%</property>
+                        </column>
+                        <column id="67">
+                            <property name="width">6%</property>
+                        </column>
+                        <column id="68">
+                            <property name="width">10%</property>
+                        </column>
+                        <column id="69">
+                            <property name="width">18%</property>
+                        </column>
+                        <header>
+                            <row id="13">
+                                <cell id="14">
+                                    <label id="21">
+                                        <text-property name="text">Número de Empleado</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="16">
+                                    <label id="15">
+                                        <text-property name="text">Nombre</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="18">
+                                    <label id="17">
+                                        <text-property name="text">Zona</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="20">
+                                    <label id="23">
+                                        <text-property name="text">Departamento</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="22">
+                                    <label id="25">
+                                        <text-property name="text">Fecha de Ingreso</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="24">
+                                    <label id="19">
+                                        <text-property name="text">Jefe Directo</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="26">
+                                    <label id="27">
+                                        <text-property name="text">Celular de la Empresa</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="28">
+                                    <label id="29">
+                                        <text-property name="text">Placas de Vehículo Asignado</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="30">
+                                    <label id="31">
+                                        <text-property name="text">Serie de Equipo de Computo Asignado</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="32">
+                                <cell id="33">
+                                    <property name="paddingLeft">3pt</property>
+                                    <data id="40">
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">numero_empleado</property>
+                                    </data>
+                                </cell>
+                                <cell id="35">
+                                    <property name="paddingLeft">3pt</property>
+                                    <data id="34">
+                                        <property name="resultSetColumn">nombre</property>
+                                    </data>
+                                </cell>
+                                <cell id="37">
+                                    <property name="paddingLeft">3pt</property>
+                                    <data id="36">
+                                        <property name="resultSetColumn">zona</property>
+                                    </data>
+                                </cell>
+                                <cell id="39">
+                                    <property name="paddingLeft">3pt</property>
+                                    <data id="42">
+                                        <property name="resultSetColumn">departamento</property>
+                                    </data>
+                                </cell>
+                                <cell id="41">
+                                    <property name="paddingLeft">3pt</property>
+                                    <data id="44">
+                                        <property name="resultSetColumn">fecha_ingreso</property>
+                                    </data>
+                                </cell>
+                                <cell id="43">
+                                    <property name="paddingLeft">3pt</property>
+                                    <data id="38">
+                                        <property name="resultSetColumn">jefe_directo</property>
+                                    </data>
+                                </cell>
+                                <cell id="45">
+                                    <property name="paddingLeft">3pt</property>
+                                    <data id="46">
+                                        <structure name="numberFormat">
+                                            <property name="category">General Number</property>
+                                            <property name="pattern">General Number</property>
+                                        </structure>
+                                        <property name="resultSetColumn">celular_empresa</property>
+                                    </data>
+                                </cell>
+                                <cell id="47">
+                                    <property name="paddingLeft">3pt</property>
+                                    <data id="48">
+                                        <property name="resultSetColumn">placas</property>
+                                    </data>
+                                </cell>
+                                <cell id="49">
+                                    <property name="paddingLeft">3pt</property>
+                                    <data id="50">
+                                        <property name="resultSetColumn">serie_equipo</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </detail>
+                        <footer>
+                            <row id="51">
+                                <cell id="52"/>
+                                <cell id="53"/>
+                                <cell id="54"/>
+                                <cell id="55"/>
+                                <cell id="56"/>
+                                <cell id="57"/>
+                                <cell id="58"/>
+                                <cell id="59"/>
+                                <cell id="60"/>
+                            </row>
+                        </footer>
+                    </table>
+                </cell>
+            </row>
+            <row id="9">
+                <cell id="10"/>
+            </row>
+        </grid>
+    </body>
+</report>
